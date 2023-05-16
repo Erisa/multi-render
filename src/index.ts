@@ -26,7 +26,8 @@ export default {
 			"cdn.erisa.cloud": {
 				R2_BUCKET: env.PUB_BUCKET,
 				DIRECTORY_LISTING: true,
-				HIDE_HIDDEN_FILES: true
+				HIDE_HIDDEN_FILES: true,
+				DIRECTORY_CACHE_CONTROL: "max-age=86400"
 			},
 			"up.erisa.uk.lewd.tech": {
 				R2_BUCKET: env.UP_BUCKET
@@ -36,11 +37,13 @@ export default {
 			},
 			"termux.lewd.tech": {
 				R2_BUCKET: env.TERMUX_BUCKET,
-				DIRECTORY_LISTING: true
+				DIRECTORY_LISTING: true,
+				DIRECTORY_CACHE_CONTROL: "max-age=86400"
 			},
 			"obs.lewd.tech": {
 				R2_BUCKET: env.OBS_BUCKET,
-				DIRECTORY_LISTING: true
+				DIRECTORY_LISTING: true,
+				DIRECTORY_CACHE_CONTROL: "max-age=86400"
 			},
 			"multi-render.erisa.workers.dev": {
 				R2_BUCKET: env.R2_BUCKET,
