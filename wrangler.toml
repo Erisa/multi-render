@@ -1,0 +1,84 @@
+name = "multi-render"
+main = "src/index.ts"
+compatibility_date = "2023-05-16"
+
+workers_dev = true
+
+routes = [
+  { pattern = "cdn.erisa.uk.lewd.tech", custom_domain = true },
+  { pattern = "up.erisa.uk.lewd.tech", custom_domain = true },
+  { pattern = "cdn.erisa.cloud", custom_domain = true },
+  { pattern = "obs.lewd.tech", custom_domain = true }
+]
+
+# In multi-render, these variables control the DEFAULTS.
+# Any options that deviate from these are put in index.ts config object.
+# Changing one here will change it across all domains that don't override it.
+
+[vars]
+# The `access-control-allow-origin` header: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+# Optional, the `access-control-allow-origin` header is omitted if unset, which blocks all cross-origin requests.
+ALLOWED_ORIGINS = ""
+
+# The `cache-control` header: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control.
+# Optional, the `cache-control` header is omitted if unset, which would NOT disable caching: https://developers.cloudflare.com/workers/runtime-apis/cache/#headers
+# For example, you can disable all cache by setting this to `no-store`.
+CACHE_CONTROL = "max-age=86400"
+
+# The string to prepend to each file path. Optional, nothing is prepended to the path if unset.
+PATH_PREFIX = ""
+
+# Index file to search for on directory requests, set to "" to disable indexes
+# Relative to the directory of the request.
+INDEX_FILE = ""
+# INDEX_FILE = "index.html"
+
+# File to fall back to when the requested path is not found in the bucket.
+# Incurs an additional read operation for 404 requests.
+# Set to "" to disable custom 404 fallbacks.
+# Relative to the root of the bucket.
+NOTFOUND_FILE = ""
+#NOT_FOUND_FILE = "404.html"
+
+# Enable to show a directory listing fallback on paths ending in /
+# If INDEX_FILE is also provided, it will be used instead if the file exists. 
+DIRECTORY_LISTING = false
+
+# Enable to hide files or directories beginning with . from directory listings.
+HIDE_HIDDEN_FILES = false
+
+# Set a cache header here, e.g. "max-age=86400", if you want to cache directory listings.
+DIRECTORY_CACHE_CONTROL = "no-store"
+
+# R2_BUCKET is required
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "kot"
+preview_bucket_name = "kot"
+
+# Extra buckets go here. Make sure to include them in Env in index.ts before use.
+[[r2_buckets]]
+binding = "PUB_BUCKET"
+bucket_name = "public-data"
+preview_bucket_name = "public-data"
+
+
+[[r2_buckets]]
+binding = "UP_BUCKET"
+bucket_name = "ashcdn"
+preview_bucket_name = "ashcdn"
+
+[[r2_buckets]]
+binding = "CDN_BUCKET"
+bucket_name = "erisacdn"
+preview_bucket_name = "erisacdn"
+
+[[r2_buckets]]
+binding = "TERMUX_BUCKET"
+bucket_name = "termux"
+preview_bucket_name = "termux"
+
+[[r2_buckets]]
+binding = "OBS_BUCKET"
+bucket_name = "obs"
+preview_bucket_name = "obs"
