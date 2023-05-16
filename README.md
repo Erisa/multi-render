@@ -6,13 +6,17 @@ A Cloudflare Workers project showcasing how to have multiple [kotx/render](https
 
 1. Clone the repository.
 2. Install dependencies: `npm install`
-3. Edit `wrangler.toml` to change default settings and specify buckets. This repository is setup for my usage so remove my buckets you won't use.
+3. Edit `wrangler.toml` to change default settings and specify domains and buckets. This repository is setup for my usage so remove my buckets you won't use.
 4. Open `index.ts`, add the buckets to the `Env` type following the example, and add `config` for them below.
 
 E.g. 
 
 `wrangler.toml`
 ```toml
+routes = [
+  { pattern = "mybucket.example.com", custom_domain = true },
+]
+
 [[r2_buckets]]
 binding = "MY_BUCKET"
 bucket_name = "mybucket"
@@ -47,4 +51,4 @@ interface Env {
 			},
 ```
 
-Once done, `npm run deploy` and attach the domains to the Worker.
+Once done, `npm run deploy` and enjoy.

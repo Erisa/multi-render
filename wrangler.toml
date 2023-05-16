@@ -4,6 +4,7 @@ compatibility_date = "2023-05-16"
 
 workers_dev = true
 
+# you can use routes if you want, or remove this whole section to manage on the dashboard
 routes = [
   { pattern = "cdn.erisa.uk.lewd.tech", custom_domain = true },
   { pattern = "up.erisa.uk.lewd.tech", custom_domain = true },
