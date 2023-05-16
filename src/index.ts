@@ -25,7 +25,8 @@ export default {
 		const config: { [id: string]: RenderEnv; } = {
 			"cdn.erisa.cloud": {
 				R2_BUCKET: env.PUB_BUCKET,
-				DIRECTORY_LISTING: true
+				DIRECTORY_LISTING: true,
+				HIDE_HIDDEN_FILES: true
 			},
 			"up.erisa.uk.lewd.tech": {
 				R2_BUCKET: env.UP_BUCKET
