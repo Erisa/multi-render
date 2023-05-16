@@ -9,7 +9,9 @@ routes = [
   { pattern = "cdn.erisa.uk.lewd.tech", custom_domain = true },
   { pattern = "up.erisa.uk.lewd.tech", custom_domain = true },
   { pattern = "cdn.erisa.cloud", custom_domain = true },
-  { pattern = "obs.lewd.tech", custom_domain = true }
+  { pattern = "obs.lewd.tech", custom_domain = true },
+  { pattern = "i.fl0.erisa.uk", custom_domain = true },
+  { pattern = "u.fl0.erisa.uk", custom_domain = true }
 ]
 
 # In multi-render, these variables control the DEFAULTS.
@@ -83,3 +85,14 @@ preview_bucket_name = "termux"
 binding = "OBS_BUCKET"
 bucket_name = "obs"
 preview_bucket_name = "obs"
+
+[[r2_buckets]]
+binding = "FL0_U_BUCKET"
+bucket_name = "fl0-u"
+preview_bucket_name = "fl0-u"
+
+
+[[r2_buckets]]
+binding = "FL0_I_BUCKET"
+bucket_name = "fl0-i"
+preview_bucket_name = "fl0-i"

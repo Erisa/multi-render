@@ -17,6 +17,8 @@ interface Env {
 	CDN_BUCKET: R2Bucket
 	TERMUX_BUCKET: R2Bucket
 	OBS_BUCKET: R2Bucket
+	FL0_U_BUCKET: R2Bucket
+	FL0_I_BUCKET: R2Bucket
 }
 
 export default {
@@ -48,6 +50,16 @@ export default {
 			"multi-render.erisa.workers.dev": {
 				R2_BUCKET: env.R2_BUCKET,
 				DIRECTORY_LISTING: true
+			},
+			"u.fl0.erisa.uk": {
+				R2_BUCKET: env.FL0_U_BUCKET,
+				INDEX_FILE: 'index.html',
+				NOTFOUND_FILE: '404.html'
+			},
+			"i.fl0.erisa.uk": {
+				R2_BUCKET: env.FL0_I_BUCKET,
+				INDEX_FILE: 'index.html',
+				NOTFOUND_FILE: '404.html'
 			}
 		}
 
