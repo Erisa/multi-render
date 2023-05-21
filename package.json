@@ -12,6 +12,6 @@
     "deploy": "wrangler publish"
   },
   "dependencies": {
-    "render2": "^1.2.0"
+    "render2": "^1.2.1"
   }
 }

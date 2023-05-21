@@ -1,4 +1,5 @@
 import render from "render2";
+import { Env as RenderEnv }  from "render2";
 
 interface Env {
 	R2_BUCKET: R2Bucket,
@@ -77,17 +78,3 @@ export default {
 		return render.fetch(request, env, ctx);
 	},
 };
-
-// TODO: work out how to import this from render
-
-interface RenderEnv {
-	R2_BUCKET: R2Bucket,
-	ALLOWED_ORIGINS?: string,
-	CACHE_CONTROL?: string,
-	PATH_PREFIX?: string
-	INDEX_FILE?: string
-	NOTFOUND_FILE?: string
-	DIRECTORY_LISTING?: boolean
-	HIDE_HIDDEN_FILES?: boolean
-	DIRECTORY_CACHE_CONTROL?: string
-}
