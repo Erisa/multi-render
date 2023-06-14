@@ -11,7 +11,8 @@ routes = [
   { pattern = "cdn.erisa.cloud", custom_domain = true },
   { pattern = "obs.lewd.tech", custom_domain = true },
   { pattern = "i.fl0.erisa.uk", custom_domain = true },
-  { pattern = "u.fl0.erisa.uk", custom_domain = true }
+  { pattern = "u.fl0.erisa.uk", custom_domain = true },
+  { pattern = "cdn-test.erisa.uk", custom_domain = true}
 ]
 
 # In multi-render, these variables control the DEFAULTS.
