@@ -10,7 +10,7 @@ routes = [
   { pattern = "obs.lewd.tech", custom_domain = true },
   { pattern = "i.fl0.erisa.uk", custom_domain = true },
   { pattern = "u.fl0.erisa.uk", custom_domain = true },
-  { pattern = "cdn-test.erisa.uk", custom_domain = true}
+  { pattern = "cdn-test.erisa.uk", custom_domain = true},
 
   # i'm using routes for these two because my resizing worker doesnt play nice with custom domains
   { pattern = "cdn.erisa.uk.lewd.tech/*" },
