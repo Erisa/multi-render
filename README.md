@@ -37,7 +37,7 @@ interface Env {
 	DIRECTORY_CACHE_CONTROL?: string
 
 	// put extra buckets here
-  MY_BUCKET: R2Bucket
+	MY_BUCKET: R2Bucket
 }
 ```
 
@@ -46,8 +46,8 @@ interface Env {
 			"mybucket.example.com": {
 				R2_BUCKET: env.MY_BUCKET,
 				DIRECTORY_LISTING: true,
-        INDEX_FILE: 'index_alt.html',
-        "ALLOWED_ORIGINS": "my-other-cool-site.example.com"
+				INDEX_FILE: 'index_alt.html',
+				ALLOWED_ORIGINS: "my-other-cool-site.example.com"
 			},
 ```
 
