@@ -18,6 +18,9 @@ routes = [
 
 ]
 
+# disable if using free workers
+logpush = true
+
 # In multi-render, these variables control the DEFAULTS.
 # Any options that deviate from these are put in index.ts config object.
 # Changing one here will change it across all domains that don't override it.
