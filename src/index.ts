@@ -32,15 +32,6 @@ export default {
 				HIDE_HIDDEN_FILES: true,
 				DIRECTORY_CACHE_CONTROL: "max-age=86400"
 			},
-			"up.erisa.uk.lewd.tech": {
-				R2_BUCKET: env.UP_BUCKET
-			},
-			"cdn.erisa.uk.lewd.tech": {
-				R2_BUCKET: env.CDN_BUCKET
-			},
-			"cdn-test.erisa.uk": {
-				R2_BUCKET: env.CDN_BUCKET
-			},
 			"termux.lewd.tech": {
 				R2_BUCKET: env.TERMUX_BUCKET,
 				DIRECTORY_LISTING: true,
